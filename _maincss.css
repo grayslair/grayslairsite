@@ -1,0 +1,416 @@
+/* -----first animetion style--------------- */
+.cover{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('grayslair10.jpg');
+  background-size: contain;
+  animation: efectOut 4s;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+.cover-pic{
+  animation:efectIn 5s;
+  object-fit: cover;
+}
+
+
+/* -------base style---------------------------- */
+.background-pic{
+  background:url('grayslair3.PNG');
+  width:100%;
+  height:100%;
+  position:fixed;
+  object-fit:cover;
+  z-index:-100;
+}
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Homemade Apple', cursive , "游教科書体","YuKyokasho";
+}
+
+.header{
+  position:fixed;
+  width:100%;
+  height:100px;
+  margin:0;
+  padding:0;
+  z-index:1;
+}
+/* ----icon style------------------- */
+.top-icon{
+  position:absolute;
+  left:20px;
+  object-fit:cover;
+  width:200px;
+  height:100px;
+  background:url('grayslair10.jpg');
+  margin-top:10px;
+  border-radius:20px;
+  transform-origin:center;
+  transition: width .3s , height .3s;
+  user-select:none;
+}
+.top-icon:hover{
+  width: 220px;
+  height: 120px;
+}
+/* --------display795~ menuicon------------------- */
+.menu{
+  list-style:none;
+  height:100px;
+  background:rgb(61, 17, 17);
+  font-size:20px;
+  display:flex;
+  align-items: center;
+  flex-direction:row-reverse;
+  color:gray;
+  margin: 0;
+  padding-right: 30px;
+  user-select:none;
+}
+.menu-item{
+  padding-right: 50px;
+  transition: font-size .3s;
+}
+
+.menu li:hover{
+  color: rgb(185, 185, 185);
+  font-size: 22px;
+}
+
+/* ---ぼかし------------------------- */
+.menuadd{
+  height:100px;
+  background:linear-gradient(rgb(61,17,17),rgba(0,0,0,0));
+}
+
+/* ----display ~795px menuicon----------------- */
+
+.open-icon{
+  user-select:none;
+  display:none;
+  position:absolute;
+  right:40px;
+  top:32px;
+}
+.open-icon .material-icons{
+  font-size:60px;
+  color:rgba(114, 114, 114, 0.61);
+}
+.open-icon.close{
+  display: none;
+}
+.close-icon{
+  position: absolute;
+  right: 40px;
+  top: 32px;
+  display: none;
+  user-select: none;
+}
+.close-icon .material-icons{
+  font-size: 60px;
+  color: rgba(114, 114, 114, 0.61);
+}
+.close-icon.show{
+  display: block;
+}
+
+/* ---openmenu code------------------------------------ */
+
+.iconmenu{
+  transform: translateY(-800px);
+  z-index: -1000;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.918);
+  font-size: 40px;
+  text-align: center;
+  list-style: none;
+  line-height: 2em;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.iconmenu.show{
+  z-index: 100;
+  transform: translateY(0);
+  transition: transform 1s;
+}
+
+
+.iconmenu li{
+  color: gray;
+  user-select: none;
+  transition: color .3s;
+}
+
+.iconmenu li:hover{
+  color: rgb(175, 175, 175);
+}
+
+.topmenu{
+  display:flex;
+  width:90%;
+  height:600px;
+  padding-top:200px;
+  margin-bottom:200px;
+  padding-left:100px;
+}
+
+.mainpic{
+  width:50%;
+  height:100%;
+  margin:0;
+  padding:0;
+}
+
+.mainpic img{
+  width:100%;
+  object-fit:cover;
+  height:100%;
+  border-radius:4%;
+  box-shadow:5px 5px 5px rgba(56, 0, 0, 0.507);
+  animation:leftSlideIn 2s 2.5s;
+}
+
+.info{
+  /* margin-top:200px; */
+  width:50%;
+  color:gray;
+  padding-left:5%;
+}
+
+.info p{
+  font-size:40px;
+  animation:rightSlideIn 2s 2.5s;
+}
+
+.info ul{
+  list-style:none;
+  /* border-left:2px solid gray; */
+  background:rgba(0, 0, 0, 0.144);
+  /* animation:fadeIn 2s 4s; */
+  position:relative;
+}
+
+.info ul::after{
+  height:100%;
+  width:2px;
+  background:gray;
+  position:absolute;
+  left:0;
+  top:0;
+  content:'';
+}
+
+.info li{
+  line-height:3em;
+  font-size:20px;
+}
+
+
+
+.li01{animation:fadeIn 3s 2.2s}
+.li02{animation:fadeIn 3s 2.4s}
+.li03{animation:fadeIn 3s 2.6s}
+
+.info li::before{
+  content:">  ";
+  color:gray;
+}
+
+.consept{
+  background:rgba(0, 0, 0, 0.541);
+  color:rgb(151, 151, 151);
+  text-align:center;
+  font-size:30px;
+  line-height:2.3em;
+  opacity:0;
+  transition:opacity 2s , transform 2s;
+  transform:translateY(100px);
+  margin-top:0;
+  padding-top:100px;
+  padding-bottom:100px;
+  margin-bottom:0px;
+}
+
+
+.consept.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+.newtopic{
+  text-align:center;
+  /* z-index:-1; */
+  position:relative;
+}
+
+.blank{
+  padding-top:200px;
+}
+
+.newtopic h2{
+  color:rgb(177, 177, 177);
+  font-size:30px;
+  position:absolute;
+  left:43%;
+  top:120px;
+  animation:bound 1s infinite;
+}
+
+
+
+.solid{
+  width:100%;
+  height:1px;
+  background-color:gray;
+  margin-bottom:50px;
+}
+
+.new{
+  margin:0px auto;
+  width:80%;
+  height:500px;
+  /* border:2px solid red; */
+  position:relative;
+  overflow:hidden;
+  opacity:0;
+  transform:translateY(50px);
+  transition:transform 1s, opacity 2s;
+  border-radius:20px;
+}
+
+
+
+.new.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.new > ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+  display:flex;
+  width:100%;
+  height:100%;
+  transition:transform 1s;
+}
+
+
+.new img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  cursor:pointer;
+  user-select:none;
+}
+
+.new li{
+  height:100%;
+  min-width:100%;
+}
+
+#next,
+#prev{
+  list-style:none;
+  color:gray;
+  font-size:30px;
+  background:url('grayslair10.jpg');
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  transition:width .2s, height .2s;
+  cursor:pointer;
+  user-select:none;
+}
+
+#next:hover,
+#prev:hover{
+  width:60px;
+  height:60px;
+}
+
+#next{
+  position:absolute;
+  top:250px;
+  right:0;
+}
+
+#prev{
+  position:absolute;
+  top:250px;
+  left:0px;
+}
+
+
+
+
+.all{
+  text-align:center;
+  width:100%;
+  margin-top:100px;
+  margin-bottom:100px
+}
+
+.all p{
+  color:gray;
+  font-size:30px;
+  border-bottom:2px solid rgb(94, 92, 92);
+}
+
+.allchildren{
+  display:flex;
+  width:80%;
+  margin:0 auto;
+  opacity:0;
+  transform:translateY(100px);
+  transition:transform 4s , opacity 2s;
+}
+
+.allchildren.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+.allchildren div{
+  width:100%;
+}
+
+
+.light{
+  animation: swing 5s infinite;
+}
+
+.all div img{
+  border-radius:10px;
+  width:70%;
+}
+
+.all div > h3{
+  color:rgb(153, 153, 153);
+  font-size:20px;
+}
+
+
+.newtopic .backcarten{
+  background:black;
+}
+
+footer{
+  height:200px;
+  width:100%;
+  background:url("grayslair10.jpg")
+}
+
+footer ul{
+  list-style:none;
+  padding:50px 100px;
+}
+
+footer li{
+  color:rgb(94, 94, 94);
+  font-size:20px;
+}
